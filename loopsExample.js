@@ -45,3 +45,7 @@ for(card of hand) {
     console.log('match!!!');
   } //end match
 } //end for of
+
+for(i = 0; i < hand.length; i++) {
+  console.log('uninitialized for loop', hand[i]);
+} //weird for loop
