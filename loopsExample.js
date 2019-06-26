@@ -49,3 +49,14 @@ for(card of hand) {
 for(i = 0; i < hand.length; i++) {
   console.log('uninitialized for loop', hand[i]);
 } //weird for loop
+
+let numberList = [3, 6, 7, 10];
+myValue = 3;
+for (i in numberList) {
+  console.log(numberList[i]);
+  //if (numberList[myValue] == true) {
+if (typeof numberList[myValue] !== 'undefined' && numberList[myValue] !== null) {
+    console.log(numberList[myValue]'Hurray!');
+  } //end if
+} //end for in
+// NEED TO HAVE IT PULL INDEX 3, NOT VALUE
