@@ -52,11 +52,21 @@ for(i = 0; i < hand.length; i++) {
 
 let numberList = [3, 6, 7, 10];
 myValue = 3;
+// this is how i should do it:
+for (let i = 0; i < numberList.length; i++) {
+    console.log(numberList[i]);
+    if (i === myValue) {
+        console.log('Hurray!');
+    } // end if
+} //end for
+
+//below will "work" but be wrong. and i learned a thing!
 for (i in numberList) {
   console.log(numberList[i]);
-  //if (numberList[myValue] == true) {
-if (typeof numberList[myValue] !== 'undefined' && numberList[myValue] !== null) {
-    console.log(numberList[myValue]'Hurray!');
+  if (i == myValue) {
+    console.log('Hurray!');
   } //end if
+    console.log(typeof i); //why is === not working?
 } //end for in
-// NEED TO HAVE IT PULL INDEX 3, NOT VALUE
+// so the above block only works with ==, it'll not work with strict ===. found out that i was registering as a string in the for in loop
+//for...in loops then must change types. Interesting.
