@@ -51,7 +51,7 @@ for(i = 0; i < hand.length; i++) {
 } //weird for loop
 
 let numberList = [3, 6, 7, 10];
-myValue = 3;
+let myValue = 3;
 // this is how i should do it:
 for (let i = 0; i < numberList.length; i++) {
     console.log(numberList[i]);
@@ -70,3 +70,10 @@ for (i in numberList) {
 } //end for in
 // so the above block only works with ==, it'll not work with strict ===. found out that i was registering as a string in the for in loop
 //for...in loops then must change types. Interesting.
+myValue = 0;
+// 7. Write a `while` loop that will increase the value of 'myValue' by 1 until its value is 10
+while (myValue < 10) {
+  console.log(myValue);
+  myValue++;
+} //end while
+console.log(myValue); //final log of myValue. It gets to 10 in final run of while loop.
